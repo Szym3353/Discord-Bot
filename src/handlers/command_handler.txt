@@ -1,0 +1,7 @@
+name - nazwa
+description - opis komendy
+args - czy posiada argumenty
+usage - użycie, np "<amount>
+guildOnly - czy tylko w gildii
+cooldown - opóźnienie przed użyciem komendy w sekundach
+permissionLevel - [1, 2] - poziom uprawnień, 1 - mod lub właściciel, 2 - właściciel
