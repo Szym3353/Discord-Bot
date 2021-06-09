@@ -120,7 +120,7 @@ module.exports = {
                     if(args[2]){
                         await CurrentMovie.find({})
                             .then((result) => {
-                                
+                                console.log(result)
                             })
                     }else return msg.reply('Poprawne użycie komendy: \`tost!film ocen [1-10]\`')
                 }
