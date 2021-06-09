@@ -1,6 +1,6 @@
 const { Collection, Channel } = require("discord.js")
 
-const { prefix, permissionLevel1, permissionLevel2 } = require(__dirname + '/../config/config.js');
+const { prefix, secondPrefix, permissionLevel1, permissionLevel2 } = require(__dirname + '/../config/config.js');
 
 const { readdirSync } = require("fs")
 
@@ -45,11 +45,17 @@ client.on("message", (msg) => {
 
 
     //Check if contains prefix
-    if(!msg.content.startsWith(prefix)) return;
+    if(!msg.content.startsWith(prefix) && !msg.content.startsWith(secondPrefix)) return;
 
     
     //Splits Arguments
-    const args = msg.content.slice(prefix.length).trim().split(/ +/g);
+    let args = ''
+    if(msg.content.startsWith(prefix)){
+        args = msg.content.slice(prefix.length).trim().split(/ +/g);
+    }
+    if(msg.content.startsWith(secondPrefix)){
+        args = msg.content.slice(secondPrefix.length).trim().split(/ +/g);
+    }
 
 
     //Set arguments to lower Case to avoid conflicts
