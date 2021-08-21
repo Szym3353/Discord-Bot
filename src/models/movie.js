@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const CurrentMovieSchema = new mongoose.Schema({
+const MovieSchema = new mongoose.Schema({
     author: {
         type: String,
         required: true,
@@ -52,8 +52,8 @@ const CurrentMovieSchema = new mongoose.Schema({
     }
 },
 {
-    collection: 'currentMovie'
+    collection: 'moviesList'
 })
 
-const CurrentMovie = mongoose.model('currentMovie', CurrentMovieSchema)
-module.exports = CurrentMovie
+const Movie = mongoose.model('moviesList', MovieSchema)
+module.exports = Movie
