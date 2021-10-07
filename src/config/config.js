@@ -1,7 +1,6 @@
 module.exports = {
     version: '0.3',
     author: 'Szym',
-    token: 'Nzk2NTAxMzAwMTI4NjQ1MTcx.X_Y1pA.IrdCdkIEmoMAaEoY2obcOgPv3s8',
     prefix: 'tost!',
     secondPrefix: 't!',
 
